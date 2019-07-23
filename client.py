@@ -1,7 +1,7 @@
 import threading,pyaudio,socket
 import wave
 #创建一个客户端的socket对象
-CHUNK = 16   #1024B 1KB缓冲区帧数
+CHUNK = 16   #16B 缓冲区帧数，该值可以修改
 FORMAT = pyaudio.paInt16  #大小格式
 CHANNELS = 2     #声道为双声道
 RATE = 44100     #录音的采样率为44.1KHz
