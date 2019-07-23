@@ -18,10 +18,10 @@ def sendauido():
 	#连接服务端
 	p=pyaudio.PyAudio()
 	stream=p.open(format=FORMAT,
-				  channels=CHANNELS,
-				  rate=RATE,
-				  input=True,
-				  frames_per_buffer=CHUNK)
+		      channels=CHANNELS,
+		      rate=RATE,
+		      input=True,
+		      frames_per_buffer=CHUNK)
 	print("*recording")
 	client.sendto(getip().encode(),(host,port))
 	recvdata,addr = client.recvfrom(1024)
