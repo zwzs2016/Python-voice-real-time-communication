@@ -11,8 +11,8 @@ def sendauido():
 	count=0
 	#发送数据，以二进制的形式发送数据，所以需要进行编码
 	client = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-	#设置服务端的ip地址
-	host='192.168.43.240'
+	#设置服务端的ip地址，默认本地ip
+	host='127.0.0.1'
 	#设置端口
 	port = 9092
 	#连接服务端
