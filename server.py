@@ -3,7 +3,7 @@ import pyaudio
 import time,os,sys
 from multiprocessing import Process
 class server:
-	host = '192.168.43.240'  #IP地址
+	host = '127.0.0.1'  #IP地址,默认本地ip
 	port=9092
 	p = pyaudio.PyAudio()
 	CHUNK = 1024   #1024B 1KB缓冲区帧数
@@ -85,11 +85,11 @@ class server:
 		accept_thred.start()
 		print('当前count的值为:',server.count)
 	def getclient():
-	#获取计算机名称
-	hostname=socket.gethostname()
-	#获取本机IP
-	ip=socket.gethostbyname(hostname)
-	print(ip)	
+		#获取计算机名称
+		hostname=socket.gethostname()
+		#获取本机IP
+		ip=socket.gethostbyname(hostname)
+		print(ip)	
 	def main(self):
 		p=Process(target=self.server,name='server')
 		p.start()
